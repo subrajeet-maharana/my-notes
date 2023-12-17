@@ -1,7 +1,7 @@
 const express = require("express");
 const { PrismaClient } = require("@prisma/client");
 
-const prisma = new PrismaClient({ datasources: {  db: { url: "mysql://postgresql://postgres:postgres@localhost:5432/postgres?schema=public" } } });
+const prisma = new PrismaClient();
 const app = express();
 
 //json
@@ -107,5 +107,5 @@ app.delete("/notes/:id", async (req, res) => {
 });
 
 // start server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

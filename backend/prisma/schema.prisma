@@ -10,9 +10,8 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model mynotes {
-  id          Int      @id @default(autoincrement())
-  title     String
+model Note {
+  id      Int    @id @default(autoincrement())
+  title   String
   content String
 }
-
